@@ -5,5 +5,5 @@ requests
 pandas
 matplotlib
 arabic-reshaper
-python-bidi
+python-bidi==0.4.2
 anthropic
