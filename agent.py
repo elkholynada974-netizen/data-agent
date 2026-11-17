@@ -9,7 +9,8 @@ TOPIC = os.environ.get("TOPIC") or "الذكاء الاصطناعي"
 LANG = os.environ.get("LANG_CODE") or "ar"
 MAX_ARTICLES = 30
 FETCH_FULL_TEXT = True
-EXTRA_URLS = []
+EXTRA_URLS = ["https://www.bbc.com/arabic/articles/c61k93dk3ky8o"]
+ONLY_URLS = True
 
 
 import re, time, html, urllib.parse
