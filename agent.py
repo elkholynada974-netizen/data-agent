@@ -81,7 +81,7 @@ def scrape_urls(urls):
 
 def collect(topic):
     rows = collect_news(topic, LANG, MAX_ARTICLES)
-    if not rows:
+    if not rows and not EXTRA_URLS:
         raise RuntimeError("مفيش نتايج — جرّب كلمة بحث تانية أو لغة تانية")
     rows = enrich_with_full_text(rows) if FETCH_FULL_TEXT else [dict(r, text=r["snippet"]) for r in rows]
     rows += scrape_urls(EXTRA_URLS)
